@@ -4,14 +4,28 @@ source "/home/hytale/server/functions.sh"
 
 SERVER_FILES="/home/hytale/server-files"
 
-# Create persistent machine-id (required for auth persistence across restarts)
-MACHINE_ID_FILE="$SERVER_FILES/.machine-id"
-if [ ! -f "$MACHINE_ID_FILE" ]; then
-    echo "Generating persistent machine-id..."
-    uuidgen | tr -d '-' | tr '[:upper:]' '[:lower:]' > "$MACHINE_ID_FILE"
+# Create persistent machine-id
+MACHINE_ID_DIR="$SERVER_FILES/.machine-id"
+mkdir -p "$MACHINE_ID_DIR"
+
+if [ ! -f "$MACHINE_ID_DIR/uuid" ]; then
+    LogInfo "Generating persistent machine-id for encrypted auth..."
+    MACHINE_UUID=$(cat /proc/sys/kernel/random/uuid)
+    MACHINE_UUID_NO_DASH=$(echo "$MACHINE_UUID" | tr -d '-' | tr '[:upper:]' '[:lower:]')
+    
+    echo "$MACHINE_UUID_NO_DASH" > "$MACHINE_ID_DIR/machine-id"
+    echo "$MACHINE_UUID_NO_DASH" > "$MACHINE_ID_DIR/dbus-machine-id"
+    echo "$MACHINE_UUID" > "$MACHINE_ID_DIR/product_uuid"
+    echo "$MACHINE_UUID" > "$MACHINE_ID_DIR/uuid"
 fi
 
-cp "$MACHINE_ID_FILE" /etc/machine-id
+# Copy to system locations
+cp "$MACHINE_ID_DIR/machine-id" /etc/machine-id
+mkdir -p /var/lib/dbus
+cp "$MACHINE_ID_DIR/dbus-machine-id" /var/lib/dbus/machine-id
+mkdir -p /sys/class/dmi/id
+cp "$MACHINE_ID_DIR/product_uuid" /sys/class/dmi/id/product_uuid
+chmod 444 /sys/class/dmi/id/product_uuid
 
 cd "$SERVER_FILES" || exit
 
