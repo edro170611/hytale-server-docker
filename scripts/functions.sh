@@ -134,10 +134,18 @@ download_server() {
     LogError "HytaleServer.jar not found after download"
     return 1
   fi
-  
+
+  # Remove outdated AOT cache only if this was an update
+  if [ -n "$current_version" ] && [ "$current_version" != "$latest_version" ]; then
+    if [ -f "$SERVER_FILES/Server/HytaleServer.aot" ]; then
+      LogWarn "Removing outdated AOT cache file (HytaleServer.aot) after update"
+      rm -f "$SERVER_FILES/Server/HytaleServer.aot"
+    fi
+  fi
+
   # Save version
   echo "$latest_version" > "$VERSION_FILE"
-  
+
   LogSuccess "Server download completed (version $latest_version)"
 }
 
